@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: bronze
+    schema: bronze
+    tables:
+      - name: raw_pokemon
+      - name: raw_pokemon__types
+      - name: raw_pokemon__stats

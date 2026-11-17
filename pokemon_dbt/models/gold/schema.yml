@@ -1,0 +1,40 @@
+version: 2
+
+models:
+  - name: gold_pokemon
+    description: "Tabela analítica final dos Pokémon da 1ª Geração."
+    columns:
+      - name: pokemon_id
+        description: "Chave primária do Pokémon."
+        tests:
+          - unique
+          - not_null
+
+      - name: nome_pokemon
+        tests:
+          - not_null
+
+      - name: tipo_primario
+        description: "O tipo primário deve estar sempre preenchido."
+        tests:
+          - not_null
+
+      - name: porte_fisico
+        description: "Valida se a classificação de peso seguiu o padrão esperado."
+        tests:
+          - accepted_values:
+              arguments:
+                values:
+                  - 'Leve (<30kg)'
+                  - 'Medio (30-100kg)'
+                  - 'Pesado (+100kg)'
+                  - 'Desconhecido'
+
+      - name: url_imagem_oficial
+        description: "Garante que a imagem para o Power BI não está vazia."
+        tests:
+          - not_null
+
+      - name: total_status_batalha
+        tests:
+          - not_null

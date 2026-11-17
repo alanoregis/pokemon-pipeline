@@ -1,0 +1,20 @@
+# Ambientes virtuais e caches do Python
+.venv/
+__pycache__/
+*.py[oc]
+*.egg-info/
+
+# Banco de dados e arquivos locais gerados
+data/*.duckdb
+data/*.duckdb.wal
+
+# Pastas de compilação do dbt
+pokemon_dbt/target/
+pokemon_dbt/dbt_packages/
+pokemon_dbt/logs/
+
+# IDE e sistema
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

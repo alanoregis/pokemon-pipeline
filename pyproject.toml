@@ -1,0 +1,12 @@
+[project]
+name = "pokemon-pipeline"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "dbt-duckdb>=1.11.1",
+    "deep-translator>=1.11.4",
+    "dlt[duckdb]>=1.31.0",
+    "requests>=2.34.2",
+]
